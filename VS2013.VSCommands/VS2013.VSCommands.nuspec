@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VS2013.VSCommands</id>
+    <title>VS2013.VSCommands</title>
+    <version>12.3.0.6</version>
+    <authors>Jarek Kardas</authors>
+    <owners>Austin Wagner</owners>
+    <summary>VS2013.VSCommands</summary>
+    <description>VS2013.VSCommands</description>
+    <projectUrl>http://vscommands.squaredinfinity.com/</projectUrl>
+    <tags>VS2013.VSCommands admin</tags>
+    <copyright></copyright>
+    <licenseUrl>http://visualstudiogallery.msdn.microsoft.com/site/c6d1c265-7007-405c-a68b-5606af238ece/eula?licenseType=None</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.github.com/austinwagner/chocolatey-packages/master/VS2013.VSCommands/VS2013.VSCommands.png</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
