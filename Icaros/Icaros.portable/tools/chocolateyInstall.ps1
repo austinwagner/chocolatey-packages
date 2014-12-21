@@ -1,5 +1,5 @@
 ﻿$packageName = 'Icaros.portable'
-$version = '2.2.3'
+$version = '2.2.6'
 $url = "http://www.austinwagner.net/files/Icaros_v$version.zip"
 
 try { 

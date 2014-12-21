@@ -1,5 +1,5 @@
 ﻿$packageName = 'Icaros.portable'
-$version = '2.2.3'
+$version = '2.2.6'
 
 try { 
     $installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
