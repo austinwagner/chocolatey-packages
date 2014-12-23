@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ps-fileassociation</id>
+    <title>PowerShell File Association Scripts</title>
+    <version>20141221</version>
+    <authors>Austin Wagner</authors>
+    <owners>Austin Wagner</owners>
+    <description>
+      Provides scripts for creating and removing Windows file associations.
+    </description>
+    <projectUrl>https://github.com/austinwagner/chocolatey-packages/ps-fileassociation</projectUrl>
+    <tags>powershell</tags>
+    <copyright>Austin Wagner 2014</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.github.com/austinwagner/chocolatey-packages/master/ps-fileassociation/ps-fileassociation.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
