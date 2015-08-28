@@ -65,7 +65,4 @@ Default editting, Presets, Open File Dialog, and Drag n Drop; Last two automatic
   <files>
     <file src="tools\**" target="tools" />
   </files>
-  <dependencies>
-    <dependency id="dotnet4.0" version="4.0" />
-  </dependencies>
 </package>
