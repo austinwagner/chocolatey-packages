@@ -4,14 +4,14 @@
     <id>icaros</id>
     <title>Icaros</title>
     <version>3.0.0-beta4</version>
-    <authors>Shark007</authors>
+    <authors>Xanashi</authors>
     <owners>Austin Wagner</owners>
     <description>
       Icaros can provide Windows Explorer thumbnails, for essentially any video media format supported by FFmpeg, this includes popular filetypes such as: Mkv, Flv, Avi, Mp4, Mov, Rmvb, M2ts, Ogm etc. Besides the FFmpeg supported filetypes, Icaros also contains custom parsers, which can produce Cover Art thumbnails for Mkv, Flac, Ape, and Mpc files. Icaros also provides Windows Explorer properties for the following popular filetypes: Mkv, Flv, Ogm, Ogv, Ogg, Flac, Ape, and Mpc. Requires .NET 4.0.
     </description>
     <projectUrl>http://shark007.net/tools.html</projectUrl>
     <tags>codec video thumbnail explorer</tags>
-    <copyright>Shark007 2015</copyright>
+    <copyright>Copyright © Tabibito Technology 2010-2015</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
     <releaseNotes>[Icaros v.3.0.0 Beta 4]
