@@ -1,16 +1,13 @@
 ﻿$packageName = 'icaros'
-$version = '3.0.0_b4'
+$version = '3.0.1_b3'
 $installerType = 'EXE'
-$sha1 = '1f106b486dd294a3995770d21127857797d56d28'
-$urlBase = "http://www.videohelp.com/download/Icaros_v$version.exe?r="
+$sha1 = '55EA70574C9578022C171E7FF822456C1904F065'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 
 $downloadUrl = 
-    Invoke-WebRequest -Uri http://www.videohelp.com/software/Icaros -UseBasicParsing |
+    Invoke-WebRequest -Uri "http://www.videohelp.com/download/Icaros_v$version.exe" -UseBasicParsing |
     select -ExpandProperty Links |
-    ? { $_ -like '*itemprop="downloadURL"*' } |
+    ? { $_ -like "*Icaros_v$version*" } |
     select -First 1 -ExpandProperty href
 
-$referrer = $downloadUrl -replace '.*\?r=(\w+)','$1'
-
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$urlBase$referrer" -checksum "$sha1" -checksumType 'sha1'
+Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$downloadUrl" -checksum "$sha1" -checksumType 'sha1'

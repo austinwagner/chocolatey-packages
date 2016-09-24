@@ -3,7 +3,7 @@
   <metadata>
     <id>icaros</id>
     <title>Icaros</title>
-    <version>2.3.0</version>
+    <version>3.0.0</version>
     <authors>Xanashi</authors>
     <owners>Austin Wagner</owners>
     <description>
@@ -14,6 +14,63 @@
     <copyright>Copyright © Tabibito Technology 2010-2015</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
+    <releaseNotes>[Icaros v.3.0.0 Final]
+
+[Major Changes]
+
+- [NEW] Brand new modern GUI with advanced customization
+- [NEW] Icaros Cache: an internal cache to help speed up thumbnailing
+- Dynamic localization of GUI and Icaros Property labels in Windows Explorer
+- All settings are now edittable, even when Icaros is activated!
+- UI is now resolution-independent, which allows better dpi awareness
+- GUI will now save Window position, size and UI settings on exit
+- Settings are now placed in appropriate pages
+- Added thumbnail offset timestamp option
+- It is now possible to register thumbnail provider and property handler seperately
+- Added 4 different ways to add new thumbnail filetypes to Icaros:
+Default editting, Presets, Open File Dialog, and Drag n Drop; Last two automatically checks if the filetype is compatible with Icaros
+- Added 'Export/Import/Reset All Settings' functionality (on the UI settings page)
+
+
+[General Changes]
+
+- Added welcome screen on first time use
+- Added auto-rotation of MP4/MOV thumbnails with orientation metadata embedded
+- Added button to open the Windows Cache directory (on Tools page)
+- Added new cli commands to IC (check -?/-help to view them all)
+- Added TotalBitrate property to the 'Details Pane' in Explorer
+- Improved track info displayed for FLV files
+- Improved thumbnailing of incomplete and unseekable files
+- Improved general cover parsing code
+- Fixed crash when parsing invalid AVC tracks
+- Fixed crash when reading PCM tracks in MKV files on 32-bit systems
+- Fixed crash when parsing certain invalid AVI files
+- Fixed corrupted Windows 10 Apps taskbar icons
+- Fixed width/height properties in some files with H264 streams
+- Fixed thumbnailing of some rare formats
+- Fixed thumbnailing of certain FLV files
+- Fixed gray thumbnails for TS files with HEVC
+- Fixed property issues after upgrading or resetting Windows 8/10
+- Fixed hang in Flac cover parser when parsing rare invalid flac files
+- Fixed bug where WMP would no longer add AVI files when Icaros was handling the properties
+- Fixed wrong 'data rate' properties in certain AVI files
+- Updated Compilers
+- Updated FFmpeg
+
+
+[Localizations] (in alphabetical order)
+
+- Added Armenian localization (Thanks Aram!
+- Added Simplified Chinese localization (Thanks danei!)
+- Added Traditional Chinese localization (Thanks Chi-Shiuan!)
+- Added Danish localization (Thanks Anon!)
+- Added French localization (Thanks Spirytus and ILVES!)
+- Added German localization (Thanks Mike!)
+- Added Greek localization (Thanks PyroStar!)
+- Added Italian localization (Thanks brunosso!)
+- Added Portuguese localization (Many thanks to Rubens)
+- Added Russian localization (Thanks Ligre!)
+- Added Spanish localization (Thanks Parody (zerouser)!)</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

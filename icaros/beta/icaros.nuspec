@@ -3,7 +3,7 @@
   <metadata>
     <id>icaros</id>
     <title>Icaros</title>
-    <version>3.0.0-beta4</version>
+    <version>3.0.1-beta3</version>
     <authors>Xanashi</authors>
     <owners>Austin Wagner</owners>
     <description>
@@ -14,53 +14,28 @@
     <copyright>Copyright © Tabibito Technology 2010-2015</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
-    <releaseNotes>[Icaros v.3.0.0 Beta 4]
-- Fixed corrupted 'Windows 10 Apps' taskbar icons
-- Fixed width/height properties in some files with H264 streams
-- Fixed thumbnails of some rare image formats
-- Added button to open the Windows Cache directory (on Tools page)
-- Added German localization (Thanks Mike!)
-- Updated Russian localization (Thanks Ligre!)
-- Updated Chinese localization (Thanks danei!)
-- Improved the permissions check when setting the IcarosCache location
-- Improved page animations (for some systems) in IcarosConfig
-- Some minor GUI improvements
-- Updated FFmpeg
+    <releaseNotes>[Icaros v.3.0.1 Beta 3]
 
-[Icaros v.3.0.0 Beta 3]
-- Added new Tools page to IcarosConfig
-- Added Portuguese Localization (Many thanks to Rubens!)
-- Finished theming code (a guide will be posted soon)
-- Fixed crash when parsing invalid AVC tracks
-- Fixed crash when reading PCM tracks in MKV files on 32-bit systems
-- Fixed crash when parsing certain invalid AVI files
-- Improved logic to determine the default Icaros cache location
-(fixes cache not working in some instances)
-- Improved checks on user selected cache locations
-- Improved track info displayed for FLV files
-- Updated Compilers (GCC 5.2 &amp; VS2015)
-- Updated FFmpeg
+- Added new commandline options (see notes)
+- Added notifier to thumbnail page that shows results of drag n drop operations (see notes)
+- Added 'Video Only' and 'Audio Only' presets
+- Added Polish localization (Thank you Xyzzy!)
+- Added Turkish localization (Thank you Torelafes!)
+- Fixed Optimfrog thumbnailing
+- Fixed Optimfrog bitrate values
+- Made EPUB a default filetype
+- Updated Danish, Portuguese and Russian localization
+- Improved donation links (labels and extra info)
+- Fixed a handful of minor bugs
 
-[Icaros v.3.0.0 Beta 2]
-- Added auto-rotation of MP4/MOV thumbnails with orientation metadata embedded
-- Fixed the cache indexer/build functionality (it didn't work as intended in Beta 1)
-- Fixed crash caused by the new Cache implementation
-- Improved exception handling in the cache indexer
-- Fixed a few typos and missing translations
-- Fixed a couple of bugs which may have caused some users issues
+[Icaros v.3.0.1 Beta 2]
 
-[Icaros v.3.0.0 Beta 1 Highlights]
-- [NEW] Brand new modern GUI with advanced customization
-- [NEW] Icaros Cache: an internal cache to help speed up thumbnailing
-- Dynamic localization of GUI and Icaros Property labels in Windows Explorer
-- All settings are now edittable, even when Icaros is activated!
-- UI is now resolution-independent, which allows better dpi awareness
-- GUI will now save Window position, size and UI settings on exit
-- Settings are now placed in appropriate pages
-- Added thumbnail offset timestamp option
-- It is now possible to register thumbnail provider and property handler seperately
-- Added 4 different ways to add new thumbnail filetypes to Icaros:
-Default editting, Presets, Open File Dialog, and Drag n Drop; Last two automatically checks if the filetype is compatible with Icaros</releaseNotes>
+- Added support for Comic Book files (CBZ, CBR, CB7)
+- Comic Book files can contain any kind of image format (jpg, png, gif, webp etc)
+- Added Japanese localization (Thank you Donkichirou!)
+- Added option to enable/disable video reel thumbnail border
+- Improved mkv handling slightly
+- Updated FFmpeg</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
