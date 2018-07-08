@@ -1,7 +1,7 @@
 ﻿$packageName = 'icaros'
-$version = '3.0.0'
+$version = '3.0.3'
 $installerType = 'EXE'
-$sha1 = '77994F4F026DB74E2116657E27B60CB9374B7C49'
+$sha512 = '9FDDFF658FE8981C6AB86E0C85927B49C11F0E0BCC5C94123637DC31179C5BA394C2932E55AF1D5AD7BE207BD5637051675F6B58C51F3AD7FC8A08A4E8976404'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 
 $downloadUrl = 
@@ -10,4 +10,4 @@ $downloadUrl =
     ? { $_ -like "*Icaros_v$version*" } |
     select -First 1 -ExpandProperty href
 
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$downloadUrl" -checksum "$sha1" -checksumType 'sha1'
+Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$downloadUrl" -checksum "$sha512" -checksumType 'sha512'

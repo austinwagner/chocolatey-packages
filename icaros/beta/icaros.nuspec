@@ -11,30 +11,38 @@
     </description>
     <projectUrl>http://shark007.net/tools.html</projectUrl>
     <tags>codec video thumbnail explorer</tags>
-    <copyright>Copyright © Tabibito Technology 2010-2015</copyright>
+    <copyright>Copyright © Tabibito Technology 2010-2018</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
-    <releaseNotes>[Icaros v.3.0.1 Beta 3]
+    <releaseNotes>[Icaros v.3.1.0 Beta 2]
 
-- Added new commandline options (see notes)
-- Added notifier to thumbnail page that shows results of drag n drop operations (see notes)
-- Added 'Video Only' and 'Audio Only' presets
-- Added Polish localization (Thank you Xyzzy!)
-- Added Turkish localization (Thank you Torelafes!)
-- Fixed Optimfrog thumbnailing
-- Fixed Optimfrog bitrate values
-- Made EPUB a default filetype
-- Updated Danish, Portuguese and Russian localization
-- Improved donation links (labels and extra info)
-- Fixed a handful of minor bugs
+- Fixed framerate property not displaying fragments in Explorer (only works on latest Win 10 builds)
+- Fixed crash when decoding HEVC on newer CPUs
+- Fixed thumbnailing of certain MP4 files
+- Installer now installs 32-bit components by default on Win 64 systems
+- Added the extensions: mpv4, hdmov, f4v to 'video only' and 'most known' presets
+- Tweaked minidumps to be about half as large in size (see notes below)
+- The "test mode" in IcarosConfig will now always produce a minidump in case of a crash
+- Made time elapsed label on indexing page translatable
+- Updated Russian and German localizations (Thank you Ligre and Mike! ^__^)
+- Updated FFmpeg
 
-[Icaros v.3.0.1 Beta 2]
 
-- Added support for Comic Book files (CBZ, CBR, CB7)
-- Comic Book files can contain any kind of image format (jpg, png, gif, webp etc)
-- Added Japanese localization (Thank you Donkichirou!)
-- Added option to enable/disable video reel thumbnail border
-- Improved mkv handling slightly
+[Icaros v.3.1.0 Beta 1]
+
+- Added new Dark theme (UI settings page)
+- Added "Test mode" on thumbnailing page (See developer notes below)
+- Improved Icaros Cache so it now returns a resized thumbnail if a larger sized version of that thumbnail has already been cached
+- Fixed several Icaros Cache Indexer issues
+- Fixed file count limit shown in IcarosConfig while running the cache indexer
+- Fixed metadata parsing in some AVI files
+- Fixed some minor GUI inconsistencies in IcarosConfig
+- Refactored a good amount of libav code (watch out for regressions!)
+- Discontinued support for Windows XP (See developer notes below. Use Icaros 3.0.3 for XP support)
+- Icaros now outputs some more comprehensive minidumps (while hopefully not increasing the size too much)
+- Improved compilation of FFmpeg
+- Updated localizations
+- Updated GCC to 7.3
 - Updated FFmpeg</releaseNotes>
   </metadata>
   <files>

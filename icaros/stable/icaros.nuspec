@@ -3,7 +3,7 @@
   <metadata>
     <id>icaros</id>
     <title>Icaros</title>
-    <version>3.0.0</version>
+    <version>3.0.3</version>
     <authors>Xanashi</authors>
     <owners>Austin Wagner</owners>
     <description>
@@ -11,66 +11,67 @@
     </description>
     <projectUrl>http://shark007.net/tools.html</projectUrl>
     <tags>codec video thumbnail explorer</tags>
-    <copyright>Copyright © Tabibito Technology 2010-2015</copyright>
+    <copyright>Copyright © Tabibito Technology 2010-2018</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
-    <releaseNotes>[Icaros v.3.0.0 Final]
+    <releaseNotes>[Icaros v.3.0.3 Final]
 
-[Major Changes]
-
-- [NEW] Brand new modern GUI with advanced customization
-- [NEW] Icaros Cache: an internal cache to help speed up thumbnailing
-- Dynamic localization of GUI and Icaros Property labels in Windows Explorer
-- All settings are now edittable, even when Icaros is activated!
-- UI is now resolution-independent, which allows better dpi awareness
-- GUI will now save Window position, size and UI settings on exit
-- Settings are now placed in appropriate pages
-- Added thumbnail offset timestamp option
-- It is now possible to register thumbnail provider and property handler seperately
-- Added 4 different ways to add new thumbnail filetypes to Icaros:
-Default editting, Presets, Open File Dialog, and Drag n Drop; Last two automatically checks if the filetype is compatible with Icaros
-- Added 'Export/Import/Reset All Settings' functionality (on the UI settings page)
-
-
-[General Changes]
-
-- Added welcome screen on first time use
-- Added auto-rotation of MP4/MOV thumbnails with orientation metadata embedded
-- Added button to open the Windows Cache directory (on Tools page)
-- Added new cli commands to IC (check -?/-help to view them all)
-- Added TotalBitrate property to the 'Details Pane' in Explorer
-- Improved track info displayed for FLV files
-- Improved thumbnailing of incomplete and unseekable files
-- Improved general cover parsing code
-- Fixed crash when parsing invalid AVC tracks
-- Fixed crash when reading PCM tracks in MKV files on 32-bit systems
-- Fixed crash when parsing certain invalid AVI files
-- Fixed corrupted Windows 10 Apps taskbar icons
-- Fixed width/height properties in some files with H264 streams
-- Fixed thumbnailing of some rare formats
-- Fixed thumbnailing of certain FLV files
-- Fixed gray thumbnails for TS files with HEVC
-- Fixed property issues after upgrading or resetting Windows 8/10
-- Fixed hang in Flac cover parser when parsing rare invalid flac files
-- Fixed bug where WMP would no longer add AVI files when Icaros was handling the properties
-- Fixed wrong 'data rate' properties in certain AVI files
-- Updated Compilers
+- Switched to the new FFmpeg decoding API
+- Added prompt if IcarosConfig is closed while the cache indexer is running
+- Added some additional error checks to the Icaros Cache Indexer
+- IcarosConfig now shows the filename of the file that is currently being processed by the cache indexer
+- Fixed parsing of subdirectories if a root (e.g. C:) is added to the Cache Locations
+- Fixed decoding of H264 444 files (no more gray frames)
+- Updated default page colors
+- Updated to VS 2017
+- Updated copyright to 2018
 - Updated FFmpeg
 
+[Icaros v.3.0.2 FINAL]
 
-[Localizations] (in alphabetical order)
+- Replaced libarchive with libunarr for even better Comic Book file support
+- Added Hungarian localization (Thank you nvi9!)
+- Added Finnish localization (Thank you Nuihc88!)
+- Added 'time elapsed' label to the Cache Indexer
+- Fixed Comic Book cover selection (didn't always select the right cover image)
+- Fixed artefacts showing in thumbnails of certain filetype/format combinations
+- Fixed some names from getting 'cut off' in the contributor section on the about page
+- Fixed some rendering bugs in IcarosConfig
+- Improved the Icaros cache location folder permission check
+- Slightly improved handling of dark frames
+- Improved UI color calculations
+- Updated Danish, Italian and Turkish localizations (Thank you Kawamoto!)
+- Updated copyright to 2017
+- Updated GCC to 7.1
+- Updated FFmpeg
 
-- Added Armenian localization (Thanks Aram!
-- Added Simplified Chinese localization (Thanks danei!)
-- Added Traditional Chinese localization (Thanks Chi-Shiuan!)
-- Added Danish localization (Thanks Anon!)
-- Added French localization (Thanks Spirytus and ILVES!)
-- Added German localization (Thanks Mike!)
-- Added Greek localization (Thanks PyroStar!)
-- Added Italian localization (Thanks brunosso!)
-- Added Portuguese localization (Many thanks to Rubens)
-- Added Russian localization (Thanks Ligre!)
-- Added Spanish localization (Thanks Parody (zerouser)!)</releaseNotes>
+[Icaros v.3.0.1 FINAL]
+
+- Added support for Comic Book files (CBZ, CBR, CB7, EPUB)
+- Comic Book files can contain any kind of image format (jpg, png, gif, webp etc)
+- Added new commandline options (use -help/-? to view them)
+- Added notifier to thumbnail page that shows results of drag n drop operations (see notes)
+- Added 'Video Only' and 'Audio Only' presets
+- Added option to enable/disable video reel thumbnail border
+
+- Added Polish localization (Thank you Xyzzy!)
+- Added Turkish localization (Thank you Torelafes!)
+- Added Ukrainian localization (Thank you Darko!)
+- Added Japanese localization (Thank you Donkichirou!)
+- Updated Danish, German, Portuguese and Russian localization
+
+- Fixed Optimfrog thumbnailing
+- Fixed Optimfrog bitrate values
+- Fixed duration/bitrate/channel properties for certain MP3 files
+- Improved duration precision for some MP3 files
+- Improved mkv handling slightly
+- Improved donation links (labels and extra info)
+- Improved -unlock command (will now perform a much cleaner unlock of Icaros)
+- Recognize WEBP as an image format
+- Fixed a handful of minor bugs
+- Updated GCC to 6.2
+- Updated FFmpeg
+</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
