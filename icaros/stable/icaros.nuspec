@@ -3,73 +3,46 @@
   <metadata>
     <id>icaros</id>
     <title>Icaros</title>
-    <version>3.0.3</version>
+    <version>3.1.0</version>
     <authors>Xanashi</authors>
     <owners>Austin Wagner</owners>
+    <summary>Provides Windows Explorer thumbnails for a wide range of video formats</summary>
     <description>
       Icaros can provide Windows Explorer thumbnails, for essentially any video media format supported by FFmpeg, this includes popular filetypes such as: Mkv, Flv, Avi, Mp4, Mov, Rmvb, M2ts, Ogm etc. Besides the FFmpeg supported filetypes, Icaros also contains custom parsers, which can produce Cover Art thumbnails for Mkv, Flac, Ape, and Mpc files. Icaros also provides Windows Explorer properties for the following popular filetypes: Mkv, Flv, Ogm, Ogv, Ogg, Flac, Ape, and Mpc. Requires .NET 4.0.
     </description>
+    <mailingListUrl>http://shark007.net/forum/Forum-Icaros-Development</mailingListUrl>
+    <bugTrackerUrl>http://shark007.net/forum/Forum-Icaros-Development</bugTrackerUrl>
     <projectUrl>http://shark007.net/tools.html</projectUrl>
     <tags>codec video thumbnail explorer</tags>
     <copyright>Copyright © Tabibito Technology 2010-2018</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <packageSourceUrl>https://github.com/austinwagner/chocolatey-packages/tree/master/icaros</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
-    <releaseNotes>[Icaros v.3.0.3 Final]
+    <releaseNotes>[Icaros v.3.1.0 Final]
 
-- Switched to the new FFmpeg decoding API
-- Added prompt if IcarosConfig is closed while the cache indexer is running
-- Added some additional error checks to the Icaros Cache Indexer
-- IcarosConfig now shows the filename of the file that is currently being processed by the cache indexer
-- Fixed parsing of subdirectories if a root (e.g. C:) is added to the Cache Locations
-- Fixed decoding of H264 444 files (no more gray frames)
-- Updated default page colors
-- Updated to VS 2017
-- Updated copyright to 2018
-- Updated FFmpeg
-
-[Icaros v.3.0.2 FINAL]
-
-- Replaced libarchive with libunarr for even better Comic Book file support
-- Added Hungarian localization (Thank you nvi9!)
-- Added Finnish localization (Thank you Nuihc88!)
-- Added 'time elapsed' label to the Cache Indexer
-- Fixed Comic Book cover selection (didn't always select the right cover image)
-- Fixed artefacts showing in thumbnails of certain filetype/format combinations
-- Fixed some names from getting 'cut off' in the contributor section on the about page
-- Fixed some rendering bugs in IcarosConfig
-- Improved the Icaros cache location folder permission check
-- Slightly improved handling of dark frames
-- Improved UI color calculations
-- Updated Danish, Italian and Turkish localizations (Thank you Kawamoto!)
-- Updated copyright to 2017
-- Updated GCC to 7.1
-- Updated FFmpeg
-
-[Icaros v.3.0.1 FINAL]
-
-- Added support for Comic Book files (CBZ, CBR, CB7, EPUB)
-- Comic Book files can contain any kind of image format (jpg, png, gif, webp etc)
-- Added new commandline options (use -help/-? to view them)
-- Added notifier to thumbnail page that shows results of drag n drop operations (see notes)
-- Added 'Video Only' and 'Audio Only' presets
-- Added option to enable/disable video reel thumbnail border
-
-- Added Polish localization (Thank you Xyzzy!)
-- Added Turkish localization (Thank you Torelafes!)
-- Added Ukrainian localization (Thank you Darko!)
-- Added Japanese localization (Thank you Donkichirou!)
-- Updated Danish, German, Portuguese and Russian localization
-
-- Fixed Optimfrog thumbnailing
-- Fixed Optimfrog bitrate values
-- Fixed duration/bitrate/channel properties for certain MP3 files
-- Improved duration precision for some MP3 files
-- Improved mkv handling slightly
-- Improved donation links (labels and extra info)
-- Improved -unlock command (will now perform a much cleaner unlock of Icaros)
-- Recognize WEBP as an image format
-- Fixed a handful of minor bugs
-- Updated GCC to 6.2
+- Added new Dark theme (UI settings page)
+- Added support for AV1/AOM decoding
+- Added "test mode" on thumbnailing page
+- Added Dutch (Netherlands) localization (Thank you mavanmanen! ^__^)
+- Added support for cover art embedded in MKV by TagLib#
+- Added the extensions: mpv4, hdmov, f4v to 'video only' and 'most known' presets
+- Improved Icaros Cache so it now returns a resized thumbnail if a larger version of that thumbnail has been cached already
+- Fixed crash for audio files with corrupt album/cover art
+- Fixed framerate property not displaying fragments (only works on latest Win 10 builds)
+- Fixed crash when decoding HEVC on newer CPUs
+- Fixed thumbnailing of certain MP4 files
+- Fixed several Icaros Cache Indexer issues
+- Fixed file count limit shown in IcarosConfig while running the indexer
+- Fixed metadata parsing in some AVI files
+- Fixed some minor GUI inconsistencies in IcarosConfig
+- Installer now installs 32-bit components by default on Win 64 systems
+- Made time elapsed label on indexing page translatable
+- Refactored a good amount of libav code
+- Discontinued support for Windows XP (check developer notes below. Use Icaros 3.0.3 for XP support)
+- Icaros now outputs some more comprehensive minidumps (while hopefully not increasing the size too much)
+- Improved compilation of FFmpeg
+- Updated localizations
+- Updated GCC to 7.3
 - Updated FFmpeg
 </releaseNotes>
   </metadata>
