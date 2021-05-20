@@ -3,7 +3,7 @@
   <metadata>
     <id>icaros</id>
     <title>Icaros</title>
-    <version>3.1.0</version>
+    <version>3.2.1</version>
     <authors>Xanashi</authors>
     <owners>Austin Wagner</owners>
     <summary>Provides Windows Explorer thumbnails for a wide range of video formats</summary>
@@ -18,32 +18,19 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <packageSourceUrl>https://github.com/austinwagner/chocolatey-packages/tree/master/icaros</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
-    <releaseNotes>[Icaros v.3.1.0 Final]
+    <releaseNotes>[Icaros v.3.2.1 Final]
 
-- Added new Dark theme (UI settings page)
-- Added support for AV1/AOM decoding
-- Added "test mode" on thumbnailing page
-- Added Dutch (Netherlands) localization (Thank you mavanmanen! ^__^)
-- Added support for cover art embedded in MKV by TagLib#
-- Added the extensions: mpv4, hdmov, f4v to 'video only' and 'most known' presets
-- Improved Icaros Cache so it now returns a resized thumbnail if a larger version of that thumbnail has been cached already
-- Fixed crash for audio files with corrupt album/cover art
-- Fixed framerate property not displaying fragments (only works on latest Win 10 builds)
-- Fixed crash when decoding HEVC on newer CPUs
-- Fixed thumbnailing of certain MP4 files
-- Fixed several Icaros Cache Indexer issues
-- Fixed file count limit shown in IcarosConfig while running the indexer
-- Fixed metadata parsing in some AVI files
-- Fixed some minor GUI inconsistencies in IcarosConfig
-- Installer now installs 32-bit components by default on Win 64 systems
-- Made time elapsed label on indexing page translatable
-- Refactored a good amount of libav code
-- Discontinued support for Windows XP (check developer notes below. Use Icaros 3.0.3 for XP support)
-- Icaros now outputs some more comprehensive minidumps (while hopefully not increasing the size too much)
-- Improved compilation of FFmpeg
-- Updated localizations
-- Updated GCC to 7.3
-- Updated FFmpeg
+- Added Cancel functionality to the Debug Page
+- Fixed AV1 crash on x86 Windows and in x86 processes
+- Fixed hang on x86 Windows mostly affecting UNC paths
+- Fixed rare event log error in x86 processes
+- Fixed Property Handler crash with some files that had a duration of 0
+- Fixed Icaros Cache crash and reset (a proper fix will be included in next release)
+- Fixed Cover Art not showing on Windows 7 and Vista
+- Fixed Settings Import not working with unicode
+- Fixed Windows Cache Size not showing the correct size on the Tools Page
+- IcarosConfig now saves the size of the Activation Panel
+- Updated LibDav1d to 0.8.2
 </releaseNotes>
   </metadata>
   <files>
