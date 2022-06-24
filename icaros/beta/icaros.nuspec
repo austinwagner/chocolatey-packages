@@ -1,67 +1,77 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
- <metadata>
-  <id>
-   icaros
-  </id>
-  <title>
-   Icaros
-  </title>
-  <version>
-   3.1.1-beta1
-  </version>
-  <authors>
-   Xanashi
-  </authors>
-  <owners>
-   Austin Wagner
-  </owners>
-  <description>
+<metadata>
+<id>icaros</id>
+<title>Icaros</title>
+<version>3.3.0-beta3</version>
+<authors>Xanashi</authors>
+<owners>Austin Wagner</owners>
+<description>
    Icaros can provide Windows Explorer thumbnails, for essentially any video media format supported by FFmpeg, this includes popular filetypes such as: Mkv, Flv, Avi, Mp4, Mov, Rmvb, M2ts, Ogm etc. Besides the FFmpeg supported filetypes, Icaros also contains custom parsers, which can produce Cover Art thumbnails for Mkv, Flac, Ape, and Mpc files. Icaros also provides Windows Explorer properties for the following popular filetypes: Mkv, Flv, Ogm, Ogv, Ogg, Flac, Ape, and Mpc. Requires .NET 4.0.
   </description>
-  <projectUrl>
-   http://shark007.net/tools.html
-  </projectUrl>
-  <tags>
-   codec video thumbnail explorer
-  </tags>
-  <copyright>
-   Copyright © Tabibito Technology 2010-2019
-  </copyright>
-  <requireLicenseAcceptance>
-   false
-  </requireLicenseAcceptance>
-  <iconUrl>
-   https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png
-  </iconUrl>
-  <releaseNotes>[Icaros v.3.1.1 Beta 1]
+<projectUrl>http://shark007.net/tools.html</projectUrl>
+<tags>codec video thumbnail explorer</tags>
+<copyright>Copyright © Tabibito Technology 2010-2022</copyright>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
+<releaseNotes>[Icaros v.3.3.0 Beta 3]
 
-- Added WEBP properties and better thumbnailing
-- Added new "Use any Cover Art" option to allow Icaros to use any embedded image as a cover
-- Added special handling of LNK (shortcut) files during registration via IcarosConfig
-- Added Urdu localization (Thank you Black Gold! ^_^)
-- Added WEBP and AIFF to the "Most known" preset
-- Added some navigational keyboard shortcuts in IcarosConfig
-Ctrl + Tab: Cycle between pages
-Ctrl + Shift + Tab: Reverse cycle between pages
-Ctrl + Q: Toggle settings page
-- Heavily improved keyboard focus in IcarosConfig
-- Improved property schema registration
-- Made "Reset Thumbnail Filetypes" fix LNK files as well
-- Fixed a large number of edge case bugs (bugs that may have affected some users, but most would have been unaffected by them)
-- Fixed wrong property values in some TAK files
-- Fixed some AIFF and WAV thumbnailing
-- Fixed some numbers in IcarosConfig not being localized
-- Fixed "Export Settings" function not always exporting all settings
-- Fixed some cases where existing thumbnail provider keys was not properly backed up by IC
-- Updated localizations
-- Updated GCC to 8.3
-- Updated to VS 2019
-- Updated copyright to 2019
+- Added AIF/AIFF/AIFC property support
+- Made the [Und] track language tag optional, and hidden by default
+- Fixed and improved the WAV property and tag parser
+- Fixed properties of several different types of MP4/MOV files
+- Fixed hang when generating properties for certain MP4 files
+- Fixed OGA, WEBMA, WEBMV not showing thier properties in File Explorer
+- Fixed thumbnailing of certain PAL8 files
+- Fixed crash if the current Icaros Cache Location had suddenly gotten
+restrictive permissions applied to the folder
+- IcarosConfig now performs a permission check on the current Icaros
+Cache Location, when going to the Cache Page. If the check fails,
+an option has been added to attempt to fix the permission issues.
+- When opening IcarosConfig for the first time, the default theme will now
+match the current Windows App theme
+- Improved Debug Mode: Icaros should now catch far fewer crashes caused
+by other software loaded in the same process as Icaros
+
+[Icaros v.3.3.0 Beta 2]
+
+- Upgraded all cache logic to 64bit
+- Heavily improved all cache logic
+- Cache no longer has a size limit where it stops working
+- Added several new thumbnail cache sizes
+- Fixed multiple potential cache crashes
+- Fixed caching of folder thumbnails on Windows 10+
+- Fixed cache indexer not using the thumbnail timestamp when enabled
+- Fixed issue where cache didn't always return a valid thumbnail even though one was available
+- Improved automatic thumbnail size detection for certain filetypes
+
+[Icaros v.3.3.0 Beta 1]
+
+- Added support for MP4 properties (incl. mov, 3gp, 3g2, mj2, psp, m4b, ism, ismv, f4v, m4a, isma)
+- Added partial support for AVIF thumbnailing
+- Added thumbnailing of AI files with an embedded image
+- Added thumbnailing of PDF files with an embedded image
+- Added OGA, WEBMV and WEBMA properties
+- Improved cover selection logic of CBZ/CBR/CB7/EPUB files
+- Fixed thumbnailing of Dolby Vision HEVC streams (dvhe)
+- Fixed cache crash when caching very small image thumbnails
+- Fixed rare Explorer hang on specific files
+- Automatically undo registry block placed by other software, that prevented Icaros from working
+- Disable the 'Icons Only' folder setting when enabling thumbnailing
+- Register OGA as an audio filetype
+- Explorer settings that have been modified by Icaros is now reverted during uninstall
+- All MP4 properties is disabled by default (As the native Windows handler allows editing of properties)
+- MP3 properties is now disabled by default
+- Sidepanel position is now remembered in IcarosConfig
+- Updated localizations (Simplified Chinese) (Thank you ZerOri!)
+- Updated LibDav1d to 0.9.2
+- Updated Unarr to 1.1.0 Beta
 - Updated FFmpeg
-  </releaseNotes>
- </metadata>
- <files>
-  <file src="tools\**" target="tools"/>
- </files>
+- Updated VS, donations amount and copyright
+- Additional minor fixes and improvements
+</releaseNotes>
+</metadata>
+<files>
+<file src="tools\**" target="tools"/>
+</files>
 </package>

@@ -1,52 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>icaros</id>
-    <title>Icaros</title>
-    <version>3.1.0</version>
-    <authors>Xanashi</authors>
-    <owners>Austin Wagner</owners>
-    <summary>Provides Windows Explorer thumbnails for a wide range of video formats</summary>
-    <description>
+<metadata>
+<id>icaros</id>
+<title>Icaros</title>
+<version>3.2.1</version>
+<authors>Xanashi</authors>
+<owners>Austin Wagner</owners>
+<summary>Provides Windows Explorer thumbnails for a wide range of video formats</summary>
+<description>
       Icaros can provide Windows Explorer thumbnails, for essentially any video media format supported by FFmpeg, this includes popular filetypes such as: Mkv, Flv, Avi, Mp4, Mov, Rmvb, M2ts, Ogm etc. Besides the FFmpeg supported filetypes, Icaros also contains custom parsers, which can produce Cover Art thumbnails for Mkv, Flac, Ape, and Mpc files. Icaros also provides Windows Explorer properties for the following popular filetypes: Mkv, Flv, Ogm, Ogv, Ogg, Flac, Ape, and Mpc. Requires .NET 4.0.
     </description>
-    <mailingListUrl>http://shark007.net/forum/Forum-Icaros-Development</mailingListUrl>
-    <bugTrackerUrl>http://shark007.net/forum/Forum-Icaros-Development</bugTrackerUrl>
-    <projectUrl>http://shark007.net/tools.html</projectUrl>
-    <tags>codec video thumbnail explorer</tags>
-    <copyright>Copyright © Tabibito Technology 2010-2018</copyright>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <packageSourceUrl>https://github.com/austinwagner/chocolatey-packages/tree/master/icaros</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
-    <releaseNotes>[Icaros v.3.1.0 Final]
+<mailingListUrl>http://shark007.net/forum/Forum-Icaros-Development</mailingListUrl>
+<bugTrackerUrl>http://shark007.net/forum/Forum-Icaros-Development</bugTrackerUrl>
+<projectUrl>http://shark007.net/tools.html</projectUrl>
+<tags>codec video thumbnail explorer</tags>
+<copyright>Copyright © Tabibito Technology 2010-2022</copyright>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<packageSourceUrl>https://github.com/austinwagner/chocolatey-packages/tree/master/icaros</packageSourceUrl>
+<iconUrl>https://cdn.rawgit.com/austinwagner/chocolatey-packages/efc7018d519051e1c5b53be431bcf688ac33c7c0/icaros/icaros.png</iconUrl>
+<releaseNotes>[Icaros v.3.2.1 Final]
 
-- Added new Dark theme (UI settings page)
-- Added support for AV1/AOM decoding
-- Added "test mode" on thumbnailing page
-- Added Dutch (Netherlands) localization (Thank you mavanmanen! ^__^)
-- Added support for cover art embedded in MKV by TagLib#
-- Added the extensions: mpv4, hdmov, f4v to 'video only' and 'most known' presets
-- Improved Icaros Cache so it now returns a resized thumbnail if a larger version of that thumbnail has been cached already
-- Fixed crash for audio files with corrupt album/cover art
-- Fixed framerate property not displaying fragments (only works on latest Win 10 builds)
-- Fixed crash when decoding HEVC on newer CPUs
-- Fixed thumbnailing of certain MP4 files
-- Fixed several Icaros Cache Indexer issues
-- Fixed file count limit shown in IcarosConfig while running the indexer
-- Fixed metadata parsing in some AVI files
-- Fixed some minor GUI inconsistencies in IcarosConfig
-- Installer now installs 32-bit components by default on Win 64 systems
-- Made time elapsed label on indexing page translatable
-- Refactored a good amount of libav code
-- Discontinued support for Windows XP (check developer notes below. Use Icaros 3.0.3 for XP support)
-- Icaros now outputs some more comprehensive minidumps (while hopefully not increasing the size too much)
-- Improved compilation of FFmpeg
+- Added Cancel functionality to the Debug Page
+- Fixed AV1 crash on x86 Windows and in x86 processes
+- Fixed hang on x86 Windows mostly affecting UNC paths
+- Fixed rare event log error in x86 processes
+- Fixed Property Handler crash with some files that had a duration of 0
+- Fixed Icaros Cache crash and reset (a proper fix will be included in next release)
+- Fixed Cover Art not showing on Windows 7 and Vista
+- Fixed Settings Import not working with unicode
+- Fixed Windows Cache Size not showing the correct size on the Tools Page
+- IcarosConfig now saves the size of the Activation Panel
+- Updated LibDav1d to 0.8.2
+
+
+[Icaros v.3.2.0 Final]
+
+- Added a new Debug page in IcarosConfig
+- Allows users to run any number files through various thumbnail and property tests,
+seeing what results are returned, which files failed, timings, what shell extensions are used, etc.
+- Can be located on the Tools page, under the Debug tab
+- Can be accessed from anywhere in IcarosConfig using 'F2' keyboard shortcut
+- Added PSD as a default filetype and DDS as a common filetype
+- Added OpenDocument (ODP, ODT, ODS) to the "Most Known" preset in IcarosConfig
+- Added 'Channel Count' and 'Sample Rate' to Explorer detail pane for audio files (see notes below)
+- Added Korean translation (Thank you jewani! ^__^)
+- Improved Welcome screen
+- Welcome screen is now localized
+- Has options to set language and theme
+- Can be accessed at any point with 'F1' keyboard shortcut
+- Improved EPUB/CBX parser with a much better cover detection algorithm
+- Improved method used to refresh thumbnails in IcarosConfig
+- Shortcut thumbnails can now be refreshed in IcarosConfig
+- Fixed properties not being generated in certain cases with files > 4GB
+- Fixed "Clear Windows Cache" function on the Tools Page on Windows 10
+- Fixed crash when thumbnailing files with rare dimensions (e.g. very small height, but long width etc.)
+- Fixed Icaros creating corrupt minidumps in debug mode
+- Fixed a LARGE quantity of cache bugs and 1 cache crash
+- Fixed TAK thumbnailing
+- Fixed 'Display icon overlay' option (inconsistent behaviour)
+- Fixed alpha channel being incorrectly set in some files' thumbnails
+- Fixed rare cases where the thumbnail returned was slightly larger than requested
+- Fixed rare Wav property crash
+- Fixed rare crash during Property Handler registration
+- Fixed crash on Cache page if cache location no longer exists
+- Fixed exception when trying to change the IcarosCache location, while it was in use
+- Fixed Property Handler unregistering other property handlers that has overwritten Icaros
+- Fixed DebugMode in Property Handler
+- Fixed a lot of rendering and positioning problems in IcarosConfig (IC)
+- Fixed IC being improperly sized/positioned when starting up in Maximized window state
+- Fixed IC blocking the auto-hidden taskbar when in Maximized windows state
+- Fixed IC being improperly positioned when the Windows Taskbar is positioned top or right on the screen
+- Fixed glass not rendering correctly in certain conditions when IC is maximized
+- Always center IC on the screen if IC window position is not saved but the window size is
+- IC glass now updates properly in various cases (e.g. wallpaper change etc.)
 - Updated localizations
-- Updated GCC to 7.3
+- Updated GCC
+- Updated dav1d to 0.6.0
 - Updated FFmpeg
+- Tons of minor fixes and improvements
 </releaseNotes>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
+</metadata>
+<files>
+<file src="tools\**" target="tools"/>
+</files>
 </package>
