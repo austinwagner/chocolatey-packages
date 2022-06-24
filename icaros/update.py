@@ -76,17 +76,19 @@ def update_package(release_kind, match, latest_version):
 
         print('Writing nuspec file', str(nuspec_path))
         with nuspec_path.open('wb') as f:
-            f.write(spec.prettify('utf8'))
+            f.write(str(spec).encode('utf-8'))
 
         print('Writing install script', str(install_script_path))
         with install_script_path.open('w') as f:
             f.write(install_script)
 
-        print('Creating nupkg')
-        subprocess.check_call(['choco', 'pack'], cwd=release_path)
+        # TODO: Pull the release notes automatically
+        print('nuspec partially updated. Get release notes from https://www.videohelp.com/software/Icaros and publish manually')
+        #print('Creating nupkg')
+        #subprocess.check_call(['choco', 'pack'], cwd=release_path)
 
-        print('Publishing nupkg')
-        subprocess.check_call(['choco', 'push', f'icaros.{str(latest_version)}.nupkg'], cwd=release_path)
+        #print('Publishing nupkg')
+        #subprocess.check_call(['choco', 'push', f'icaros.{str(latest_version)}.nupkg', '--source', 'https://push.chocolatey.org/'], cwd=release_path)
 
         print('Icaros', release_kind, 'updated')
     else:
